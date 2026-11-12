@@ -1,0 +1,24 @@
+# ==============================================================================
+# Model Configuration & Pricing (USD per 1,000 tokens)
+# PLACEHOLDER values — verify current provider rates before running evals!
+# Used by LiteLLM and src/core/cost.py.
+# ==============================================================================
+
+default_small_model: "small"
+default_large_model: "large"
+
+models:
+  small:
+    provider_model: "gpt-4o-mini"       # PLACEHOLDER: confirm small model
+    input_price_per_1k: 0.00015         # PLACEHOLDER USD per 1K input tokens
+    output_price_per_1k: 0.00060        # PLACEHOLDER USD per 1K output tokens
+    temperature: 0.0
+    max_tokens: 512
+
+  large:
+    provider_model: "gpt-4o"            # PLACEHOLDER: confirm large model
+    input_price_per_1k: 0.00250         # PLACEHOLDER USD per 1K input tokens
+    output_price_per_1k: 0.01000        # PLACEHOLDER USD per 1K output tokens
+    temperature: 0.0
+    max_tokens: 1024
+

@@ -1,0 +1,26 @@
+# ==============================================================================
+# Application & Pipeline Settings
+# Placeholder defaults — adjust once corpus and baseline are finalized.
+# ==============================================================================
+
+corpus:
+  corpus_version: 1  # Bump whenever documents are re-ingested
+  collection_name: "rag_corpus"
+  chunk_size: 512    # Characters or tokens (decide in Phase 0)
+  chunk_overlap: 64
+  top_k: 5
+
+embedding:
+  model_name: "BAAI/bge-small-en-v1.5"  # Shared by corpus, queries, and cache
+
+cache:
+  enabled: false  # Disabled during Phase 0 baseline; enabled in Phase 1A
+  collection_name: "semantic_cache"
+  similarity_threshold: 0.92  # PLACEHOLDER: tune in Phase 1A via scripts/tune_threshold.py
+  ttl_seconds: 86400          # 24 hours
+
+router:
+  enabled: false  # Disabled during Phase 0 baseline; enabled in Phase 1B
+  min_retrieval_score: 0.50   # PLACEHOLDER: tune for escalation
+  max_simple_query_words: 15
+

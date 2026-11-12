@@ -1,0 +1,46 @@
+# Environments & Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Testing & Linters
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local Data, Vector Stores & Databases (Never commit!)
+data/qdrant_storage/
+data/redis_data/
+data/logs/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Model caches / large files
+.cache/
+models/
+*.bin
+*.safetensors
+*.pt
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
